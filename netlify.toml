@@ -1,6 +1,20 @@
 [build]
+  publish = "public"
+  command = "make production-build"
+
 [build.environment]
-HUGO_VERSION = "0.89.4"
+  HUGO_VERSION = "0.89.4"
+
+[context.production.environment]
+  HUGO_ENV = "production"
+
+[context.deploy-preview]
+  HUGO_ENV = "staging"
+  command = "make preview-build"
+
+[context.branch-deploy]
+  command = "make preview-build"
 
 [dev]
-framework = "hugo"
+  framework = "hugo"
+  command = "make serve URL=http://localhost:8888/"
