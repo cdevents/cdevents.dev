@@ -1,0 +1,16 @@
+{
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdevents/cdevents.dev.git"
+  },
+  "author": "CDEvents maintainers",
+  "bugs": {
+    "url": "https://github.com/cdevents/cdevents.dev/issues"
+  },
+  "homepage": "https://github.com/cdevents/cdevents.dev",
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.3.7",
+    "postcss-cli": "^9.0.2"
+  }
+}
