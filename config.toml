@@ -70,7 +70,7 @@ anchor = "smart"
 
 [languages]
 [languages.en]
-title = ""
+Title = "CDEvents"
 description = "A common specification for Continuous Delivery events"
 languageName ="English"
 # Weight used for sorting.
