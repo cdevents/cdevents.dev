@@ -34,7 +34,9 @@
           {{ with .Get "title" }}
             {{ if $feature_image }}
               {{ $title := . }}
-              <img id="banner-feature-image" class="feature-image" alt="{{ $title | html }}" src="{{ $feature_image.RelPermalink }}">
+              <div class="feature-box">
+                <img id="banner-feature-image" class="feature-image" alt="{{ $title | html }}" src="{{ $feature_image.RelPermalink }}"/>
+              </div>
               {{ end }}
             {{ else }}
               <h1 class="display-1 mt-0 mt-md-5 pb-4">{{ $title := . }}{{ with $logo_image }}{{ $logo_image_resized := (.Fit (printf "70x70 %s" $logo_anchor)) }}<img class="td-cover-logo" src="{{ $logo_image_resized.RelPermalink }}" alt="{{ $title | html }} Logo">{{ end }}{{ $title | html }}</h1>

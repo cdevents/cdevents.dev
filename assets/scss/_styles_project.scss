@@ -17,10 +17,6 @@
     Styling for mobile:
 */
 @media only screen and (max-width: $mobile-width) {
-    #banner-hero-logo {
-        display: none
-    }
-
     #privacy-notice {
         width: 100vw;
     }
@@ -30,4 +26,9 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.feature-box {
+    padding-left: 10%;
+    padding-right: 10%;
 }
