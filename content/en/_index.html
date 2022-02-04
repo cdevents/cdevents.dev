@@ -18,15 +18,31 @@ linkTitle = "cdevents.dev Homepage"
 </div>
 {{< /blocks/cover >}}
 
-{{< blocks/section color="secondary" >}}
+{{< blocks/lead title="About CDEvents" color="dark">}}
 
-<div class="mx-auto">
-	{{% alert title="Work in progress" color="secondary" %}}
-	{{% /alert %}}
-</div>
+CDEvents is a common specification for Continuous Delivery events, enabling interoperability in the complete software production ecosystem.
+<br/>
+It's an incubated project at the <a href="https://cd.foundation/projects">Continuous Delivery Foundation</a> (CDF).
+{{< /blocks/lead >}}
 
-{{< /blocks/section >}}
+{{% blocks/section color="secondary" %}}
 
-{{< blocks/section color="white" >}}
+{{% blocks/feature icon="fa-users" title="Community" %}}
+The project is currently developed and maintained by the <a href="https://github.com/cdfoundation/sig-events">Events Special Interest Group</a> at the CDF. We welcome <a href="community">contributions</a>!
+{{% /blocks/feature %}}
 
+{{% blocks/feature icon="fa-cogs" title="Demos" %}}
+Our first <a href="https://github.com/cdfoundation/sig-events/tree/main/poc">proof of concept</a> includes CDEvents in <a href="https://tekton.dev">Tekton</a> and <a href="https://keptn.sh">Keptn</a>. We are building the next PoC.
+{{% /blocks/feature %}}
+
+{{% blocks/feature icon="fa-spinner" title="In Progress" %}}
+Our specification work is driven by interoperability use cases. We are working towards v0.1.
+{{% /blocks/feature %}}
+
+{{% /blocks/section %}}
+
+{{< blocks/section color="white">}}
+<figure class="centered-image">
+  <img src="/images/cdevents-logo.svg" alt="CDEvents Logo" width="100%"/>
+</figure>
 {{< /blocks/section >}}
