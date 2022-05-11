@@ -8,6 +8,10 @@
 [context.production.environment]
   HUGO_ENV = "production"
 
+[[redirects]]
+  from = "/cdeventscon-rsvp"
+  to = "https://zoom.us/webinar/register/WN_wQOe7Gw1Sd6wMm5DUMocoQ"
+
 [context.deploy-preview]
   HUGO_ENV = "staging"
   command = "make preview-build"
