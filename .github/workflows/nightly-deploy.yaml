@@ -19,6 +19,8 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           submodules: true
+      - name: Setup Git User to GitHub Action bot
+        uses: fregante/setup-git-user@v1
 
       - name: Update Content Submodule
         run: |
