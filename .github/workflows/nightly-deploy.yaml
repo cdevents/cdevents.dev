@@ -40,6 +40,7 @@ jobs:
           git push
 
       - name: Trigger a Netlify Build
+        if: ${{ steps.vars.outputs.PUSH_AND_SYNC }}
         env:
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
         run: |
