@@ -1,0 +1,36 @@
+name: Trigger Netlify Build
+on:
+  schedule:
+    # Run at 3:15AM UTC daily
+    - cron: '15 3 * * *'
+jobs:
+  sync:
+    name: 'Sync content and deploy'
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          submodules: true
+
+      - name: Update Content Submodule
+        run: |
+          # Update the submodule
+          git submodule update --remote content/en/docs
+
+          # Create a commit and push it
+          git add -u
+          git commit -m "Update content/en/docs"
+          git push
+
+      - name: Trigger a Netlify Build
+        env:
+          NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+        run: |
+          curl -X POST -d {} $NETLIFY_BUILD_HOOK
