@@ -26,9 +26,16 @@ jobs:
         run: |
           # Update the submodule
           git submodule update --remote content/en/docs
-
-          # Create a commit and push it
+          # Stage changes and check status
           git add -u
+          GIT_STATUS=$(git status -s)
+          if [-n $GIT_STATUS]; then PUSH_AND_SYNC='true' ; fi
+          echo ::set-output name=PUSH_AND_SYNC::${PUSH_AND_SYNC}
+
+      - name: Create a commit and push if needed
+        if: ${{ steps.vars.outputs.PUSH_AND_SYNC }}        
+        run: |
+          # Create a commit and push it
           git commit -m "Update content/en/docs"
           git push
 
