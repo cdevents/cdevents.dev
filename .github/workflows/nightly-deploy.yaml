@@ -23,24 +23,25 @@ jobs:
         uses: fregante/setup-git-user@v1
 
       - name: Update Content Submodule
+        id: update
         run: |
           # Update the submodule
           git submodule update --remote content/en/docs
           # Stage changes and check status
-          git add -u
           GIT_STATUS=$(git status -s)
           if [ -n "$GIT_STATUS" ]; then PUSH_AND_SYNC='true' ; fi
           echo ::set-output name=PUSH_AND_SYNC::${PUSH_AND_SYNC}
 
       - name: Create a commit and push if needed
-        if: ${{ steps.vars.outputs.PUSH_AND_SYNC }}
+        if: ${{ steps.update.outputs.PUSH_AND_SYNC }}
         run: |
           # Create a commit and push it
+          git add -u
           git commit -m "Update content/en/docs"
           git push
 
       - name: Trigger a Netlify Build
-        if: ${{ steps.vars.outputs.PUSH_AND_SYNC }}
+        if: ${{ steps.update.outputs.PUSH_AND_SYNC }}
         env:
           NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
         run: |
