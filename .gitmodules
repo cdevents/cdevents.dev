@@ -1,6 +1,3 @@
-[submodule "themes/docsy"]
-	path = themes/docsy
-	url = https://github.com/google/docsy
 [submodule "content/en/docs"]
 	path = content/en/docs
 	url = https://github.com/cdevents/spec
