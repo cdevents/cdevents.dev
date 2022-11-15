@@ -3,27 +3,132 @@ title = "CDEvents"
 linkTitle = "cdevents.dev Homepage"
 
 +++
-
+<!-- cSpell:locale en-US -->
 {{< blocks/cover title="CDEvents" subtitle="A common specification for Continuous Delivery events" image_anchor="top" color="primary" height="min">}}
-<div class="mx-auto">
-	<a class="btn btn-lg btn-dark mr-3 mb-4" href="docs">
-		Get Started <i class="fas fa-arrow-alt-circle-right ml-2"></i>
-	</a>
-	<a class="btn btn-lg btn-light mr-3 mb-4" href="https://github.com/cdevents">
-		GitHub <i class="fab fa-github ml-2 "></i>
-	</a>
+<br>
+<div>
+	Embrace the freedom to pick and choose as you will, empower your builds with broad reusability and free your Continuous Delivery approach from vendor lock-in
+<br/><br/>
+</div>
+<div>
+	With CDEvents, you have the freedom to adopt the Continuous Delivery approach that your product needs, with the flexibility to incorporate whatever tooling best suits your specific requirements
+	<br/><br/>
+</div>
+<div>
+	CDEvents is a common specification for Continuous Delivery events, enabling interoperability in the complete software production ecosystem
+	<br/>
 </div>
 <div class="mx-auto mt-5">
 	{{< blocks/link-down color="info" >}}
 </div>
 {{< /blocks/cover >}}
 
-{{< blocks/lead title="About CDEvents" color="dark">}}
+{{< blocks/cdelead title="About CDEvents" color="white">}}
+<p>
+	We are all too aware that teams building software products have a hidden overhead that they must manage. Everyone involved understands that you are building a machine to solve your customers' problem, and that this machine is an asset that must be invested in and maintained, in order to maximize its value. What many fewer people recognize is that to do this successfully, you must also own a second machine, whose only purpose is to build the first.
+</p>
+<div>
+	<p>The first machine, that is your product, is highly visible and commands all the attention and investment.</p>
+	<p>The second machine, that is critical to maintaining the value of the first, often sits in darkness, neglected and poorly understood, despite being essential to building all the value in your business.</p>
+</div>
+<p>
+	When you design your product, you have the freedom to choose from an almost infinite palette of reusable, modular libraries and frameworks. When you design your build system, however, your choices are much more limited, often being constrained to accepting the features offered by your current cloud vendor, or building something from first principles, which must be maintained with scant resources.
+</p>
+<p>
+	Although many tools exist in the CI/CD space, they have been unable to talk to each other in any standardized way, until today. The Continuous Delivery Foundation’s CDEvents project has been created to solve this interoperability problem, providing a new evolution in CI/CD capabilities.
+</p>
+{{< /blocks/cdelead >}}
 
-CDEvents is a common specification for Continuous Delivery events, enabling interoperability in the complete software production ecosystem.
-<br/>
-It's an incubated project at the <a href="https://cd.foundation/projects">Continuous Delivery Foundation</a> (CDF).
+{{< blocks/lead title="CDF" color="light">}}
+CDEvents is an incubated project at the <a href="https://cd.foundation/projects">Continuous Delivery Foundation</a>
+
+<a href="https://cd.foundation/" aria-label="CD Foundation"><img src="https://raw.githubusercontent.com/cdfoundation/artwork/main/cdf/stacked/color/cdf-stacked-color.svg" width="20%" alt="CD Foundation Logo"/></a>
 {{< /blocks/lead >}}
+
+{{< blocks/cdelead title="Benefits" color="white">}}
+<p>
+	CDEvents builds upon the work done by the CDF to set out <a href="https://bestpractices.cd.foundation">best practices in Continuous Delivery</a>, to define a common language for CI/CD ecosystem events, permitting the decoupling of pipeline descriptions from physical implementations. A decoupled CI/CD architecture is easy to scale and makes the CI/CD pipelines more resilient
+	to failures, which is critical as the end-to-end software production and delivery pipelines grow more and more complex, not least in a microservices architecture with thousands of independent pipelines. 
+</p>
+<p>
+	Using CDEvents makes it simple to connect workflows from different systems, greatly increasing the pace at which you can migrate to a fully automated Continuous Delivery process for your organization.
+</p>
+<p>	
+	Having standardized events, everywhere, means that it is much easier to improve the observability and auditability of your workflows across disparate technology platforms. 
+	Utilizing a common descriptive language makes it much simpler for your staff to understand all of your workflows, regardless of which team, or platform they are supporting, and has the added benefit of making it possible to easily switch tooling or infrastructure vendors, should you need to do so.
+</p>
+<br/><br/>
+{{< /blocks/cdelead >}}
+
+{{< blocks/lead title="Governance" color="dark">}}
+<p>
+	The CDEvents project’s mission is to standardize an event protocol specification that caters to	technology-agnostic machine-to-machine communication in CI/CD systems. This specification is published, reviewed, and agreed upon between relevant Linux Foundation projects/members. 
+</p>
+{{< /blocks/lead >}}
+{{< blocks/cdelead title="Overview" color="white">}}
+<p>
+	CDEvents are declarative events. By “declarative”, we refer to events through which the producer sends information about an occurrence, without needing knowledge of how the event will be used on the receiving side, or even who will receive it.
+</p>
+<p>
+	In contrast, imperative events would be events that are sent with the intent of triggering a specific reaction, like “start a pipeline” or “deploy an application”. Imperative events create coupling between producer and consumer as they typically require some form of acknowledgement to be sent back by the consumer of the original event back to the producer.
+</p>
+<p>
+	Use cases are key to understanding CDEvents. When defining CDEvents and their attributes, we must know what minimal set of information is needed to satisfy a particular use case.
+</p>
+<p>
+	The primary use case is interoperability, making it possible for one CI/CD tool to consume events produced by another without the need for static, imperative definitions. This use case focuses on how to make CI/CD tools work together in a more automated, streamlined manner.
+</p>
+<p>
+	The secondary use case is observability and metrics. Essential to improving the Continuous Delivery workflow is the ability of the pipeline to collect events from different CI/CD tools. Common events, reported from all involved tools, permits a unified, end-to-end process that spans many tools.
+</p>
+{{< /blocks/cdelead >}}
+
+{{< blocks/lead title="events" color="light">}}
+<p>
+	The goal of the CDEvents specification is to define interoperability between systems that allow services to produce or consume events, where the producer and consumer can be developed and deployed independently, in isolation. A producer can generate events before a consumer is listening, and a consumer can express an interest in an event or class of events that is not yet being produced.
+</p>
+{{< /blocks/lead >}}
+
+{{< blocks/cdelead title="Benefits" color="white">}}
+<p>
+	The CDEvents specification extends the <a href="https://cloudevents.io/">CloudEvents</a> specification, providing a vocabulary appropriate to CI/CD events. This vocabulary is built upon the <a href="https://bestpractices.cd.foundation/resources/tools-terminology/">terminology</a> created and maintained within the CDF interoperability special interest group.
+</p>
+<p>
+	The intention is to provide an Open framework in which you can describe your desired Continuous Delivery processes, in line with best practices and expressed in a familiar form that is aligned to your other Cloud-based event-driven processes.
+</p>
+<p>
+	CDEvents introduces a set of common abstractions to aid in this process. 
+</p>
+
+<br/>
+
+{{< cardpane >}}
+	{{< card header="Source Code Version Control Events" >}}
+	Represent events associated with the management of source code assets
+	{{< /card >}}
+	{{< card header="Continuous Integration Pipelines Events" >}}
+	Represent events related to building, testing, packaging, and releasing software artifacts
+	{{< /card >}}
+{{< /cardpane >}}
+{{< cardpane >}}
+	{{< card header="Continuous Deployment Pipelines Events" >}}
+	Represent events related to environments where the artifacts produced by the integration pipelines are intended to run
+	{{< /card >}}
+	{{< card header="Core Events" >}}
+	Represent shared abstractions such as Task Runs and Pipeline Runs
+	{{< /card >}}
+{{< /cardpane >}}
+
+<p>
+	There is interest in implementing in many of your favorite CI/CD tools, including ArgoCD, Flux, Jenkins, Jenkins-X, Keptn, Knative, Ortelius, Shipwright, Spinnaker, Tekton. Some of them have started proof-of-concept implementations with CDEvents.
+</p>
+<br/><br/>
+<div class="mx-auto">
+	<a class="btn btn-lg btn-dark mr-3 mb-4" href="docs">
+		Read the Docs <i class="fas fa-arrow-alt-circle-right ml-2"></i>
+	</a>
+</div>
+{{< /blocks/cdelead >}}
 
 {{% blocks/section color="secondary" %}}
 
@@ -42,9 +147,3 @@ Our first <a href="https://github.com/cdevents/spec/releases/tag/v0.1.0">release
 {{% /blocks/feature %}}
 
 {{% /blocks/section %}}
-
-{{< blocks/section color="white">}}
-<figure class="centered-image">
-  <img src="/images/cdevents-logo.svg" alt="CDEvents Logo" width="100%"/>
-</figure>
-{{< /blocks/section >}}

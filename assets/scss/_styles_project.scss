@@ -13,6 +13,25 @@
     z-index: 1;
 }
 
+.card {
+    background-color: #ffefd5;
+  }
+
+.card-text:last-child {
+    font-weight: 300;
+  }
+  
+/*
+
+    Styling for desktop:
+*/
+
+.td-max-width-on-larger-screens {
+    @include media-breakpoint-up(lg) {
+        max-width: 100%;
+    }
+}
+
 /*
     Styling for mobile:
 */
@@ -31,4 +50,8 @@
 .feature-box {
     padding-left: 10%;
     padding-right: 10%;
+}
+
+.alt-link {
+    color: $alt-link;
 }
