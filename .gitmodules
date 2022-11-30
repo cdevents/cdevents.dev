@@ -1,3 +1,3 @@
-[submodule "content/en/docs"]
-	path = content/en/docs
-	url = https://github.com/cdevents/spec
+[submodule "themes/hugo-redirect"]
+	path = themes/hugo-redirect
+	url = https://github.com/gcc42/hugo-redirect.git

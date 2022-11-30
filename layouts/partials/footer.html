@@ -17,15 +17,15 @@
         {{ end }}
       </div>
       <div class="col-12 col-sm-6 text-center py-2 order-sm-2">
-        {{ with .Site.Params.copyright }}<small class="text-white">&copy; {{ now.Year}} {{ .}} {{ T "footer_all_rights_reserved" }}</small>{{ end }}
+        {{ with .Site.Params.copyright }}<small class="text-white">&copy; {{ now.Year}} {{ .}} {{ T "footer_all_rights_reserved" }}</small>{{ end }}<br>
         <small class="text-white">The Linux Foundation has registered trademarks and uses trademarks.
-For a list of trademarks of The Linux Foundation, please see our <a href="https://www.linuxfoundation.org/trademark-usage">Trademark Usage page</a>.
+For a list of trademarks of The Linux Foundation, please see our <a href="https://www.linuxfoundation.org/trademark-usage" class="alt-link">Trademark Usage page</a>.
 Linux is a registered trademark of Linus Torvalds.</small>
-        {{ with .Site.Params.privacy_policy }}<small class="ml-1"><a href="{{ . }}" target="_blank" rel="noopener">{{ T "footer_privacy_policy" }}</a></small>{{ end }}
+        {{ with .Site.Params.privacy_policy }}<small class="ml-1"><a href="{{ . }}" target="_blank" rel="noopener" class="alt-link">{{ T "footer_privacy_policy" }}</a></small>{{ end }}
         {{ if .Site.Params.privacy_policy }}
           {{ if .Site.Params.terms_of_use }}<small class="text-white"> and </small>
         {{ end }}{{ end }}
-        {{ with .Site.Params.terms_of_use }}<small class="ml-1"><a href="{{ . }}" target="_blank" rel="noopener">{{ T "footer_terms_of_use" }}</a></small>{{ end }}
+        {{ with .Site.Params.terms_of_use }}<small class="ml-1"><a href="{{ . }}" target="_blank" rel="noopener" class="alt-link">{{ T "footer_terms_of_use" }}</a></small>{{ end }}
 	{{ if not .Site.Params.ui.footer_about_disable }}
 		{{ with .Site.GetPage "about" }}<p class="mt-2"><a href="{{ .RelPermalink }}">{{ .Title }}</a></p>{{ end }}
 	{{ end }}
