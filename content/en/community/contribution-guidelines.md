@@ -75,10 +75,10 @@ Install a copy of [Hugo](https://gohugo.io) in your dev environment. You will ne
 From within your local copy of your cdevents.dev fork, start the Hugo server with the following:
 
 ```bash
- hugo server --printI18nWarnings --bind 0.0.0.0 --baseURL http://your-dev-ip-address:1313
+ netlify dev
  ```
 <!-- markdownlint-disable-next-line MD001 MD034 -->
- This will allow you to browse your copy of the website at http://localhost:1313 and also use a phone or tablet to check mobile rendering by navigating to http://your-dev-ip-address:1313 from the device.
+ This will allow you to browse your copy of the website at http://localhost:8888
 
  Edits to the local copy of the site should be rendered automatically, but if something seems wrong, you may need to restart the server under some circumstances. Watch out for issues caused by browser caches, as these are common.
 

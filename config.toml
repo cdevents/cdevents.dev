@@ -131,7 +131,7 @@ url_latest_version = "https://cdevents.dev/docs"
 
 [[params.versions]]
   version = "v0.1.0"
-  url = "https://github.com/cdevents/spec/tree/v0.1.0"
+  url = "https://github.com/cdevents/spec/tree/v0.1.0/spec.md"
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
 github_repo = "https://github.com/cdevents/spec"
