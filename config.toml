@@ -4,7 +4,7 @@ title = "CDEvents"
 enableRobotsTXT = true
 
 # Hugo allows theme composition (and inheritance). The precedence is from left to right.
-theme = ["hugo-redirect", "github.com/google/docsy", "github.com/google/docsy/dependencies"]
+theme = ["github.com/gcc42/hugo-redirect", "github.com/google/docsy", "github.com/google/docsy/dependencies"]
 
 # Will give values to .Lastmod etc.
 enableGitInfo = true
