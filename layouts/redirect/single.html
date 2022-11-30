@@ -1,0 +1,6 @@
+{{ if .Params.redirect_to_versioned }}
+    {{ $versioneddest := replace .Params.redirect_to_versioned "VERSION" .Site.Params.version }}
+    {{ partial "redirect" (dict "dest" $versioneddest) }}
+{{ else }}
+    {{ partial "redirect" (dict "dest" .Params.redirect_to) }}
+{{ end }}
