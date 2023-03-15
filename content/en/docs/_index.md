@@ -35,11 +35,14 @@ Definition of specific events that are fundamental to pipeline execution and orc
 {{< blocks/feature icon="fa-solid fa-code-branch" title="[Source Code Control Events](source-code-version-control/)" >}}
 Handling Events relating to changes in version management of Source Code and related assets<br><br>
 {{< /blocks/feature >}}
-{{< blocks/feature icon="fa-solid fa-network-wired" title="[Continuous Integration Events](continuous-integration-pipeline-events/)" >}}
+{{< blocks/feature icon="fa-solid fa-network-wired" title="[Continuous Integration Events](continuous-integration/)" >}}
 Handling Events associated with Continuous Integration activities, typically involving build and test<br><br>
 {{< /blocks/feature >}}
-{{< blocks/feature icon="fa-solid fa-satellite-dish" title="[Continuous Deployment Events](continuous-deployment-pipeline-events/)" >}}
+{{< blocks/feature icon="fa-solid fa-satellite-dish" title="[Continuous Deployment Events](continuous-deployment/)" >}}
 Handling Events associated with Continuous Deployment activities<br><br>
+{{< /blocks/feature >}}
+{{< blocks/feature icon="fa-solid fa-gears" title="[Continuous Operations Events](continuous-operations/)" >}}
+Handling Events associated with Continuous Operations activities<br><br>
 {{< /blocks/feature >}}
 {{< blocks/feature icon="fa-solid fa-arrow-right-arrow-left" title="[CloudEvents Binding and Transport](cloudevents-binding/)" >}}
 Defining how CDEvents are mapped to CloudEvents for transportation and delivery<br><br>
