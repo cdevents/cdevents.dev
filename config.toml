@@ -112,7 +112,7 @@ archived_version = false
 # The version number for the version of the docs represented in this doc set.
 # Used in the "version-banner" partial to display a version number for the
 # current doc set.
-version = "v0.1.1"
+version = "v0.1.2"
 
 # A link to latest version of the docs. Used in the "version-banner" partial to
 # point people to the main doc site.
@@ -125,9 +125,9 @@ url_latest_version = "https://cdevents.dev/docs"
   version = "latest"
   url = "https://cdevents.dev/docs"
 
-#[[params.versions]]
-#  version = "v0.1.1"
-#  url = "https://github.com/cdevents/spec/tree/v0.1.1"
+[[params.versions]]
+ version = "v0.1.1"
+ url = "https://github.com/cdevents/spec/tree/v0.1.1/spec.md"
 
 [[params.versions]]
   version = "v0.1.0"
