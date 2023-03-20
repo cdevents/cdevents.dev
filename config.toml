@@ -127,7 +127,7 @@ url_latest_version = "https://cdevents.dev/docs"
 
 [[params.versions]]
  version = "v0.1.2"
- url = "https://github.com/cdevents/spec/tree/v0.1.1/spec.md"
+ url = "https://github.com/cdevents/spec/tree/v0.1.2/spec.md"
 
 [[params.versions]]
  version = "v0.1.1"
