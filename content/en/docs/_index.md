@@ -38,6 +38,9 @@ Handling Events relating to changes in version management of Source Code and rel
 {{< blocks/feature icon="fa-solid fa-network-wired" title="[Continuous Integration Events](continuous-integration/)" >}}
 Handling Events associated with Continuous Integration activities, typically involving build and test<br><br>
 {{< /blocks/feature >}}
+{{< blocks/feature icon="fa-solid fa-flask" title="[Testing Events](testing/)" >}}
+Handling Events associated with Testing activities<br><br>
+{{< /blocks/feature >}}
 {{< blocks/feature icon="fa-solid fa-satellite-dish" title="[Continuous Deployment Events](continuous-deployment/)" >}}
 Handling Events associated with Continuous Deployment activities<br><br>
 {{< /blocks/feature >}}
