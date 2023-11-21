@@ -3,6 +3,12 @@ resources/
 node_modules/
 package-lock.json
 .hugo_build.lock
+
 # Local Netlify folder
 .netlify
 .DS_Store
+
+# Downstream files
+static/0.1.0/
+static/0.1.1/
+static/0.1.2/

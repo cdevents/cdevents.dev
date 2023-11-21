@@ -13,7 +13,12 @@ description: >
 <!-- cSpell:locale en-US -->
 # Contribution Guidelines
 
-Thank you for contributing your time and expertise to CDEvents. This document describes the contribution guidelines for the project.
+Thank you for contributing your time and expertise to CDEvents. This document describes the contribution guidelines for the project specification and website:
+
+* [sdk-go](https://github.com/cdevents/sdk-go?tab=readme-ov-file#contributing)
+* [sdk-java](https://github.com/cdevents/sdk-java?tab=readme-ov-file#contributing)
+
+The CDEvents SDKs have dedicated contributing guides in the respective repositories.
 
 **Note:** Before you start contributing, you must read and abide by our **[Code of Conduct](https://github.com/cdevents/.github/blob/main/docs/CODE_OF_CONDUCT.md)**.
 
@@ -32,7 +37,7 @@ CDEvents welcomes all of contributions! We encourage you to engage with the
 Resources for contributors:
 
 * [Project Roadmap](/community/roadmap)
-* [Specification v0.2 Roadmap](https://github.com/orgs/cdevents/projects/1/views/9)
+* [Specification v0.4 Roadmap](https://github.com/orgs/cdevents/projects/1/views/13)
 * [GitHub Issues](https://github.com/cdevents/spec/issues)
 * [Communication Channels](https://github.com/cdevents/spec/blob/main/README.md#community)
 
@@ -75,8 +80,9 @@ Install a copy of [Hugo](https://gohugo.io) in your dev environment. You will ne
 From within your local copy of your cdevents.dev fork, start the Hugo server with the following:
 
 ```bash
- netlify dev
+netlify dev
  ```
+
 <!-- markdownlint-disable-next-line MD001 MD034 -->
  This will allow you to browse your copy of the website at http://localhost:8888
 
