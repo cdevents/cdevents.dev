@@ -15,10 +15,10 @@ description: >
 
 Thank you for contributing your time and expertise to CDEvents. This document describes the contribution guidelines for the project specification and website:
 
+The CDEvents SDKs have dedicated contributing guides in the respective repositories:
+
 * [sdk-go](https://github.com/cdevents/sdk-go?tab=readme-ov-file#contributing)
 * [sdk-java](https://github.com/cdevents/sdk-java?tab=readme-ov-file#contributing)
-
-The CDEvents SDKs have dedicated contributing guides in the respective repositories.
 
 **Note:** Before you start contributing, you must read and abide by our **[Code of Conduct](https://github.com/cdevents/.github/blob/main/docs/CODE_OF_CONDUCT.md)**.
 
