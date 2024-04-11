@@ -47,6 +47,9 @@ Handling Events associated with Continuous Deployment activities<br><br>
 {{< blocks/feature icon="fa-solid fa-gears" title="[Continuous Operations Events](continuous-operations/)" >}}
 Handling Events associated with Continuous Operations activities<br><br>
 {{< /blocks/feature >}}
+{{< blocks/feature icon="fa-solid fa-ticket" title="[Ticket Events](tickets/)" >}}
+Handling Events associated with Tickets<br><br>
+{{< /blocks/feature >}}
 {{< blocks/feature icon="fa-solid fa-arrow-right-arrow-left" title="[CloudEvents Binding and Transport](cloudevents-binding/)" >}}
 Defining how CDEvents are mapped to CloudEvents for transportation and delivery<br><br>
 {{< /blocks/feature >}}
