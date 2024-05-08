@@ -3,7 +3,7 @@ on:
   workflow_dispatch: {}
 jobs:
   sync:
-    name: 'Sync content and deploy'
+    name: Sync content and deploy
     runs-on: ubuntu-latest
 
     defaults:
@@ -27,7 +27,7 @@ jobs:
           # Stage changes and check status
           GIT_STATUS=$(git status -s)
           if [ -n "$GIT_STATUS" ]; then PUSH_AND_SYNC='true' ; fi
-          echo ::set-output name=PUSH_AND_SYNC::${PUSH_AND_SYNC}
+          echo "PUSH_AND_SYNC=${PUSH_AND_SYNC}" >> $GITHUB_OUTPUT
 
       - name: Create a commit and push if needed
         if: ${{ steps.update.outputs.PUSH_AND_SYNC }}
