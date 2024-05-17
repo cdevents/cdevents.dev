@@ -29,6 +29,8 @@ for tag in $(git tag); do
 
     # Starting with v0.4 we serve links schemas too
     if [[ -d schemas/links ]]; then
-        cp -r schemas/links "${TARGET_SCHEMA_FOLDER}"
+        for schema in schemas/*json; do
+            cp -r "schemas/links/${schema}" "schemas/links/${schema%.*}"
+        done
     fi
 done
