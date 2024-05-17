@@ -29,8 +29,18 @@ for tag in $(git tag); do
 
     # Starting with v0.4 we serve links schemas too
     if [[ -d schemas/links ]]; then
-        for schema in schemas/*json; do
-            cp -r "schemas/links/${schema}" "schemas/links/${schema%.*}"
+        pushd schemas
+        mkdir "${TARGET_SCHEMA_FOLDER}/links" || true
+        for schema in links/*json; do
+            cp -r "${schema}" "${TARGET_SCHEMA_FOLDER}/${schema}"
+            cp -r "${schema}" "${TARGET_SCHEMA_FOLDER}/${schema%.*}"
         done
+        popd
+    fi
+
+    # Starting with v0.4 we serve the custom events schema
+    if [[ -f custom/schema.json ]]; then
+        cp custom/schema.json "${TARGET_SCHEMA_FOLDER}/custom"
+        cp custom/schema.json "${TARGET_SCHEMA_FOLDER}/custom.json"
     fi
 done
