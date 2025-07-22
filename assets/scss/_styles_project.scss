@@ -63,3 +63,18 @@
 .slightly-opaque-image {
     opacity: 0.4;
 }
+
+/* Styles for RSS link */
+.td-rss-button {
+   font-size: 0;
+   background-color: $primary;
+
+   &:hover { 
+      color: #fff;
+      background-color: darken($primary, 10%);
+   }
+
+   i { font-size: 20px; }
+
+
+}
