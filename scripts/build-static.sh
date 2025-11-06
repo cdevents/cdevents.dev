@@ -5,10 +5,12 @@ set -exo pipefail
 
 BASE_DIR="$( cd "$( dirname "$0" )/.." >/dev/null 2>&1 && pwd )"
 STATIC_DIR="${BASE_DIR}/static"
-DOCS_DIR="$(mktemp -d)"
+DOCS_DIR="${SPEC_DIR:-$(mktemp -d)}"
 
 # Clone the spec repo to pull the schemas
-git clone https://github.com/cdevents/spec "${DOCS_DIR}"
+if [ ! -d ${DOCS_DIR}/.git ]; then
+    git clone https://github.com/cdevents/spec "${DOCS_DIR}"
+fi
 
 # Serve versioned schemas
 cd "${DOCS_DIR}"

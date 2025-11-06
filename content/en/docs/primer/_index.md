@@ -196,8 +196,8 @@ version every time the spec version is changed.
 
 Examples:
 
-- Schema: `"$id": "https://cdevents.dev/0.1.1/schema/artifact-packaged-event",`
-- Event: `"version": "0.1.1"`
+- Schema: `"$id": "https://cdevents.dev/0.5.0/schema/artifact-packaged-event",`
+- Event: `"specversion": "0.5.0"`
 
 ### Development of a new version
 
